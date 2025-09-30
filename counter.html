@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Front End</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .counter { font-size: 3em; margin: 20px; }
+        button { font-size: 1.5em; margin: 10px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="counter" id="counter">0</div>
+    <button onclick="decrement()">-</button>
+    <button onclick="increment()">+</button>
+    <script>
+        let count = 0;
+        function updateCounter() {
+            document.getElementById('counter').textContent = count;
+        }
+        function increment() {
+            count++;
+            updateCounter();
+        }
+        function decrement() {
+            count--;
+            updateCounter();
+        }
+    </script>
+</body>
+</html>
